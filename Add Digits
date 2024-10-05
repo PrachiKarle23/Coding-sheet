@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int addDigits(int num) {
+       if(num<9){
+        return num;
+       }
+
+       int ans=num;
+       while(ans>9)
+       {
+          int sum=0;
+          while(num!=0){
+             int rem=num%10;
+             sum+=rem;
+             num/=10;
+          }
+          ans=sum;
+          num=sum;
+       }
+        return ans;
+    }
+};
