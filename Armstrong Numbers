@@ -1,0 +1,16 @@
+class Solution {
+  public:
+    string armstrongNumber(int n) {
+       int ans=0;
+       int originalN=n;
+       while(n!=0){
+           int rem=n%10;
+           ans+=(rem*rem*rem);
+           n/=10;
+       }
+       if(ans==originalN){
+           return "true";
+       }
+       return "false";
+    }
+};
